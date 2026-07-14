@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Список постов</h1>
+{% for post in posts %}
+
+<h3>{{ post.title }}</h3>
+
+<i>{{ post.created_at }}</i>
+
+<p>{{ post.content }}</p>
+<p>Цена: {{ post.price }} сом</p>
+
+<hr>
+{% empty %}
+<p>Постов пока нет.</p>
+{% endfor %}
+
+</body>
+</html>
